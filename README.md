@@ -24,7 +24,7 @@ If you prefer to install it manually:
 1. Copy `ShortformOverlay.setting`, `ShortformOverlay.png` and the three asset images (`TikTokOverlay.png`, `YouTubeShortsOverlay.png`, `InstagramReelsOverlay.png`).
 2. Navigate to your DaVinci Resolve Fusion directory:
    * **Windows:** `%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\Edit\Generators\`
-3. Paste all four files into the `Generators` folder.
+3. Paste all five files into the `Generators` folder.
 
 ---
 
@@ -43,7 +43,7 @@ If you prefer to install it manually:
 This project is open-source and free to use for both personal and commercial projects. 
 
 ### MIT License
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](../../LICENSE) for more information.
 
 ### Asset Disclaimer
 All platform overlay layout graphics (`TikTokOverlay.png`, `YouTubeShortsOverlay.png`, `InstagramReelsOverlay.png`) are included strictly as educational/technical design references for content creators. All platform names, logos, and UI layouts are copyrighted property of their respective owners (ByteDance, Google/YouTube, and Meta/Instagram). No infringement intended.
