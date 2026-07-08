@@ -43,7 +43,7 @@ If you prefer to install it manually:
 This project is open-source and free to use for both personal and commercial projects. 
 
 ### MIT License
-Distributed under the MIT License. See [LICENSE](../../LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/Creative-Crafter/davinci-shortform-overlays/blob/main/LICENSE) for more information.
 
 ### Asset Disclaimer
 All platform overlay layout graphics (`TikTokOverlay.png`, `YouTubeShortsOverlay.png`, `InstagramReelsOverlay.png`) are included strictly as educational/technical design references for content creators. All platform names, logos, and UI layouts are copyrighted property of their respective owners (ByteDance, Google/YouTube, and Meta/Instagram). No infringement intended.
