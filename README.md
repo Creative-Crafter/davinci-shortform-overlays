@@ -21,7 +21,7 @@ An open-source, lightweight DaVinci Resolve template designed for short-form vid
 
 ### Method 2: Manual Installation
 If you prefer to install it manually:
-1. Copy `ShortformOverlay.setting` and the three asset images (`TikTokOverlay.png`, `YouTubeShortsOverlay.png`, `InstagramReelsOverlay.png`).
+1. Copy `ShortformOverlay.setting`, `ShortformOverlay.png` and the three asset images (`TikTokOverlay.png`, `YouTubeShortsOverlay.png`, `InstagramReelsOverlay.png`).
 2. Navigate to your DaVinci Resolve Fusion directory:
    * **Windows:** `%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\Edit\Generators\`
 3. Paste all four files into the `Generators` folder.
