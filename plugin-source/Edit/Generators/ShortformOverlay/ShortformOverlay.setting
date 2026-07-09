@@ -1,0 +1,217 @@
+{
+	Tools = ordered() {
+		ShortformOverlay = MacroOperator {
+			UserControls = ordered() {
+                Platform = {
+                    LINKS_Name = "Platform",
+                    LINKID_DataType = "Number",
+                    INPID_InputControl = "ComboControl",
+                    INP_Integer = true,
+                    INP_Default = 0,
+                    ICS_ControlPage = "Controls",
+                    { CCS_AddString = "TikTok", },
+                    { CCS_AddString = "YouTube Shorts", },
+                    { CCS_AddString = "Instagram Reels", },
+                }
+            },
+			CtrlWZoom = false,
+			Inputs = ordered() {
+			    Platform = InstanceInput {
+			        SourceOp = "Switch1",
+			        Source = "Source",
+			        Page = "Controls",
+			        Name = "Platform",
+			        Default = 0,
+			    }
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "MediaOut1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Loader3 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Setting:InstagramReelsOverlay.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					CtrlWShown = false,
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 119.333, 117.606 } },
+				},
+				Loader1 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Setting:TikTokOverlay.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					CtrlWShown = false,
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 119.333, 51.6061 } },
+				},
+				Loader2 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Setting:YouTubeShortsOverlay.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					CtrlWShown = false,
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 119.333, 84.606 } },
+				},
+				MediaOut1 = MediaOut {
+					CtrlWZoom = false,
+					CtrlWShown = false,
+					Inputs = {
+						Index = Input { Value = "0", },
+						Input = Input {
+                            SourceOp = "Transformieren1",
+                            Source = "Output",
+                        }
+					},
+					ViewInfo = OperatorInfo { Pos = { 868, 101.909 } },
+				},
+				Merge3 = Merge {
+                    CtrlWShown = false,
+                    Inputs = {
+                        Foreground = Input {
+                            SourceOp = "Transformieren1",
+                            Source = "Output",
+                        },
+                        PerformDepthMerge = Input { Value = 0, }
+                    },
+                    ViewInfo = OperatorInfo { Pos = { 688.667, 103.121 } },
+                },
+				Transformieren1 = ofx.com.blackmagicdesign.resolvefx.Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Source = Input {
+							SourceOp = "Switch1",
+							Source = "Output",
+						},
+						controlMode = Input { Value = FuID { "TransformControlsSliders" }, },
+						controlReset = Input { Value = 0, },
+						controlGroup = Input { Value = 1, },
+						controlVisibility = Input { Value = FuID { "Show" }, },
+						posX = Input { Value = 0, },
+						posY = Input { Value = 0, },
+						zoom = Input { Value = 1, },
+						rotate = Input { Value = 0, },
+						scaleX = Input { Value = 1, },
+						scaleY = Input { Value = 1, },
+						pitch = Input { Value = 0, },
+						yaw = Input { Value = 0, },
+						flipH = Input { Value = 0, },
+						flipV = Input { Value = 0, },
+						adjustGroup = Input { Value = 0, },
+						isCrop = Input { Value = 0, },
+						cropL = Input { Value = 0, },
+						cropR = Input { Value = 0, },
+						cropT = Input { Value = 0, },
+						cropB = Input { Value = 0, },
+						edgeSoftness = Input { Value = 0, },
+						edgeRounding = Input { Value = 0, },
+						animationGroup = Input { Value = 0, },
+						serializedWarpable = Input { Value = "", },
+						serializedPinnable = Input { Value = "", },
+						motionBlur = Input { Value = 0, },
+						advancedGroup = Input { Value = 0, },
+						edgeBehaviour = Input { Value = FuID { "Constant" }, },
+						CompositeType = Input { Value = FuID { "COMPOSITE_NORMAL" }, },
+						olayAntiAlias = Input { Value = 1, },
+						previewAlpha = Input { Value = 0, },
+						isLegacyCrop = Input { Value = 0, },
+						isLegacyAlphaHandling = Input { Value = 0, },
+						isEnforceBlanking = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						srcProcessingAlphaMode = Input { Value = -1, },
+						dstProcessingAlphaMode = Input { Value = -1, },
+						resolvefxVersion = Input { Value = "1.4", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 570, 106.758 } },
+				},
+				Switch1 = Switch {
+					CtrlWShown = false,
+					Inputs = {
+						NumberOfInputs = Input { Value = 3, },
+						Source = Input { Value = 2, },
+						Input0 = Input {
+							SourceOp = "Loader1",
+							Source = "Output",
+						},
+						Input1 = Input {
+							SourceOp = "Loader2",
+							Source = "Output",
+						},
+						Input2 = Input {
+							SourceOp = "Loader3",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 445.333, 105.545 } },
+					Colors = { TileColor = { R = 0.572549019607843, G = 0.572549019607843, B = 0.572549019607843 }, }
+				}
+			},
+		}
+	},
+	ActiveTool = "ShortformOverlay"
+}
