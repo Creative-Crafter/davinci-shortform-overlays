@@ -34,8 +34,8 @@ If you prefer to install it manually without the `.drfx` bundle:
 ## How to Use
 
 1. After installation, open DaVinci Resolve and head to the **Edit Page**.
-2. Open the **Effects Library** and look under **Generator > Fusion Generators**.
-3. Drag and drop **Shortform Overlay** onto your timeline above your video track.
+2. Open the **Effects Library** and look under **Generator > ShortformOverlay**.
+3. Drag and drop **ShortformOverlay** onto your timeline above your video track.
 4. Open the **Inspector** panel in the top right.
 5. Use the **Platform** dropdown menu to toggle between TikTok, YouTube Shorts, and Instagram Reels layout guides.
 
