@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="Shortform Overlay Logo" width="200">
+</p>
+
 # Shortform Overlay for DaVinci Resolve
 
 An open-source, lightweight DaVinci Resolve template designed for short-form video creators. It provides instant, toggleable safe-zone overlays for **TikTok**, **YouTube Shorts**, and **Instagram Reels** directly inside the Edit and Fusion pages, ensuring your essential text and visuals never get cut off by platform UI elements.
