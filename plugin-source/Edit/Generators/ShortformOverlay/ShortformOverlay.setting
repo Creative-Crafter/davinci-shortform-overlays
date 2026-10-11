@@ -7,11 +7,12 @@
                     LINKID_DataType = "Number",
                     INPID_InputControl = "ComboControl",
                     INP_Integer = true,
-                    INP_Default = 0,
+                    INP_Default = 3,
                     ICS_ControlPage = "Controls",
                     { CCS_AddString = "TikTok", },
                     { CCS_AddString = "YouTube Shorts", },
                     { CCS_AddString = "Instagram Reels", },
+                    { CCS_AddString = "Multiplatform", },
                 }
             },
 			CtrlWZoom = false,
@@ -21,7 +22,7 @@
 			        Source = "Source",
 			        Page = "Controls",
 			        Name = "Platform",
-			        Default = 0,
+			        Default = 3,
 			    }
 			},
 			Outputs = {
@@ -32,6 +33,33 @@
 			},
 			ViewInfo = GroupInfo { Pos = { 0, 0 } },
 			Tools = ordered() {
+				Loader4 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Setting:Multiplatform.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					CtrlWShown = false,
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 119.333, 150.606 } },
+				},
 				Loader3 = Loader {
 					Clips = {
 						Clip {
@@ -192,8 +220,8 @@
 				Switch1 = Switch {
 					CtrlWShown = false,
 					Inputs = {
-						NumberOfInputs = Input { Value = 3, },
-						Source = Input { Value = 2, },
+						NumberOfInputs = Input { Value = 4, },
+						Source = Input { Value = 3, },
 						Input0 = Input {
 							SourceOp = "Loader1",
 							Source = "Output",
@@ -204,6 +232,10 @@
 						},
 						Input2 = Input {
 							SourceOp = "Loader3",
+							Source = "Output",
+						},
+						Input3 = Input {
+							SourceOp = "Loader4",
 							Source = "Output",
 						}
 					},
