@@ -27,7 +27,7 @@ An open-source, lightweight DaVinci Resolve template designed for short-form vid
 ### Method 2: Manual Installation
 If you prefer to install it manually without the `.drfx` bundle:
 1. Go to the `plugin-source` folder in this repository.
-2. Copy `ShortformOverlay.setting`, `ShortformOverlay.png`, and the three asset images (`TikTokOverlay.png`, `YouTubeShortsOverlay.png`, `InstagramReelsOverlay.png`).
+2. Copy `ShortformOverlay.setting`, `ShortformOverlay.png`, and the three asset images (`TikTokOverlay.png`, `YouTubeShortsOverlay.png`, `InstagramReelsOverlay.png`, `Multiplatform.png`).
 3. Navigate to your DaVinci Resolve Fusion directory:
    * **Windows:** `%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\Edit\Generators\`
    * **macOS:** `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Templates/Edit/Generators/`
@@ -59,4 +59,5 @@ If you want to modify the source files and build your own `.drfx` plugin package
            ├── ShortformOverlay.png
            ├── TikTokOverlay.png
            ├── YouTubeShortsOverlay.png
-           └── InstagramReelsOverlay.png
+           ├── InstagramReelsOverlay.png
+           └── Multiplatform.png
