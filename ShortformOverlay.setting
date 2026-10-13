@@ -13,6 +13,17 @@
                     { CCS_AddString = "YouTube Shorts", },
                     { CCS_AddString = "Instagram Reels", },
                     { CCS_AddString = "Multiplatform", },
+                },
+                Opacity = {
+                    LINKS_Name = "Opacity (%)",
+                    LINKID_DataType = "Number",
+                    INPID_InputControl = "SliderControl",
+                    INP_Default = 100,
+                    INP_MinScale = 0,
+                    INP_MaxScale = 100,
+                    INP_MinAllowed = 0,
+                    INP_MaxAllowed = 100,
+                    ICS_ControlPage = "Controls",
                 }
             },
 			CtrlWZoom = false,
@@ -147,19 +158,35 @@
 					Inputs = {
 						Index = Input { Value = "0", },
 						Input = Input {
-                            SourceOp = "Transformieren1",
+                            SourceOp = "Merge3",
                             Source = "Output",
                         }
 					},
 					ViewInfo = OperatorInfo { Pos = { 868, 101.909 } },
 				},
+				Background1 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						UseFrameFormatSettings = Input { Value = 1, },
+						TopLeftRed = Input { Value = 0, },
+						TopLeftGreen = Input { Value = 0, },
+						TopLeftBlue = Input { Value = 0, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 570, 170 } },
+				},
 				Merge3 = Merge {
                     CtrlWShown = false,
                     Inputs = {
+                        Background = Input {
+                            SourceOp = "Background1",
+                            Source = "Output",
+                        },
                         Foreground = Input {
                             SourceOp = "Transformieren1",
                             Source = "Output",
                         },
+                        Blend = Input { Expression = "Opacity / 100", },
                         PerformDepthMerge = Input { Value = 0, }
                     },
                     ViewInfo = OperatorInfo { Pos = { 688.667, 103.121 } },
@@ -207,7 +234,7 @@
 						isEnforceBlanking = Input { Value = 0, },
 						blendGroup = Input { Value = 0, },
 						blendIn = Input { Value = 1, },
-						blend = Input { Value = 0, },
+						blend = Input { Value = 1, },
 						ignoreContentShape = Input { Value = 0, },
 						legacyIsProcessRGBOnly = Input { Value = 0, },
 						IsNoTemporalFramesReqd = Input { Value = 0, },
