@@ -13,6 +13,7 @@
                     { CCS_AddString = "YouTube Shorts", },
                     { CCS_AddString = "Instagram Reels", },
                     { CCS_AddString = "Multiplatform", },
+                    { CCS_AddString = "Snapchat Spotlight", },
                 },
                 Opacity = {
                     LINKS_Name = "Opacity (%)",
@@ -44,11 +45,38 @@
 			},
 			ViewInfo = GroupInfo { Pos = { 0, 0 } },
 			Tools = ordered() {
+				Loader5 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Setting:SnapchatSpotlightOverlay.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					CtrlWShown = false,
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 119.333, 183.606 } },
+				},
 				Loader4 = Loader {
 					Clips = {
 						Clip {
 							ID = "Clip1",
-							Filename = "Setting:Multiplatform.png",
+							Filename = "Setting:MultiplatformOverlay.png",
 							FormatID = "PNGFormat",
 							StartFrame = -1,
 							LengthSetManually = true,
@@ -247,7 +275,7 @@
 				Switch1 = Switch {
 					CtrlWShown = false,
 					Inputs = {
-						NumberOfInputs = Input { Value = 4, },
+						NumberOfInputs = Input { Value = 5, },
 						Source = Input { Value = 3, },
 						Input0 = Input {
 							SourceOp = "Loader1",
@@ -263,6 +291,10 @@
 						},
 						Input3 = Input {
 							SourceOp = "Loader4",
+							Source = "Output",
+						},
+						Input4 = Input {
+							SourceOp = "Loader5",
 							Source = "Output",
 						}
 					},
